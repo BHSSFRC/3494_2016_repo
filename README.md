@@ -1,7 +1,7 @@
 # 3494_training
 The code behind FRC team 3494's 2016 robit. This time ~~hopefully~~ set up right on Github.
 
-New programmers are to refer to [gettingstarted.md](gettingstarted.md.)
+New programmers are to refer to [gettingstarted.md](gettingstarted.md)
 
 **HOW TO USE THIS REPOSITORY**
 
