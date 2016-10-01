@@ -1,7 +1,6 @@
 #include "Auto_Roller_Lift.h"
 
-Auto_Roller_Lift::Auto_Roller_Lift(float time_, float speed_)
-{
+Auto_Roller_Lift::Auto_Roller_Lift(float time_, float speed_) {
 	// Use Requires() here to declare subsystem dependencies
 	 Requires(roller);
 	// speed = speed_;
@@ -27,7 +26,7 @@ void Auto_Roller_Lift::Execute()
 bool Auto_Roller_Lift::IsFinished()
 {
 	CommandBase::roller->Roller_Lift(0);
-	return true;;
+	return true;
 }
 
 // Called once after isFinished returns true
