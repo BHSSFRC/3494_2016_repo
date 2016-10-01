@@ -10,11 +10,11 @@ Rollers::Rollers() :
 	//create a talon object to control the rollers lift
 	talon_rollers_lift_left = new CANTalon(ROLLERS_MOTOR_LIFT_LEFT);
 	//talon_rollers_lift_left -> EnableControl();
-	talon_rollers_lift_left -> SetSafetyEnabled(false);
+	talon_rollers_lift_left -> SetSafetyEnabled(true);
 
 	talon_rollers_lift_right = new CANTalon(ROLLERS_MOTOR_LIFT_RIGHT);
 	//talon_rollers_lift_right -> EnableControl();
-	talon_rollers_lift_right -> SetSafetyEnabled(false);
+	talon_rollers_lift_right -> SetSafetyEnabled(true);
 
 	roller_left = new CANTalon(ROLLERS_MOTOR_LEFT);	// create talon rollers these are pwm
 	roller_right = new CANTalon(ROLLERS_MOTOR_RIGHT);
