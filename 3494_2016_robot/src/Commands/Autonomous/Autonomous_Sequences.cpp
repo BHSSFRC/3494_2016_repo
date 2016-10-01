@@ -65,7 +65,7 @@ void Autonomous_Sequences::auto3() // This is for approaching defence
 {
 	SmartDashboard::PutBoolean("Auto3 State", three);
 	// AddSequential(new Auto_Roller_Lift(1.5, .5)); // goes down with 50% power
-	AddSequential(new Auto_Move_Tim(-.75, -.75,2)); // perfect time = 1 second and .75 power
+	AddSequential(new Auto_Move_Tim(0.75, 0.75, 2)); // perfect time = 1 second and .75 power
 }
 
 void Autonomous_Sequences::auto4() {
