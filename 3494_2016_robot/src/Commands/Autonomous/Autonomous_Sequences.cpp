@@ -5,13 +5,12 @@
 #include "Auto_Roller_Lift.h"
 #include "Turn.h"
 
-Autonomous_Sequences::Autonomous_Sequences(int autoMode)
-{
+Autonomous_Sequences::Autonomous_Sequences(int autoMode) {
 
 	SmartDashboard::init();
 	one = false; // these are the autonomous states
 	two = false;
-	three = false;
+	three = true;
 	four = false;
 	five = false;
 	//test of reading from smart dashboard
