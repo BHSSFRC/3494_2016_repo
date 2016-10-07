@@ -63,7 +63,7 @@ const int TALON_LIFT = 80;
 const int TALON_LIFT_2 = 90;
 ////////////////////////////////////////////////////////////
 const float DPAD_LIFT = .85;
-const float DPAD_DRIVE = .50;
+const float DPAD_DRIVE = 1;
 const float CAM_1 = 6;
 const float CAM_2 = 7;
 ////////////////////////////////////////////////////////////

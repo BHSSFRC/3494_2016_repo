@@ -12,9 +12,9 @@ Rollers::Rollers() :
 	//talon_rollers_lift_left -> EnableControl();
 	talon_rollers_lift_left -> SetSafetyEnabled(false);
 
-	talon_rollers_lift_right = new CANTalon(ROLLERS_MOTOR_LIFT_RIGHT);
+	//talon_rollers_lift_right = new CANTalon(ROLLERS_MOTOR_LIFT_RIGHT);
 	//talon_rollers_lift_right -> EnableControl();
-	talon_rollers_lift_right -> SetSafetyEnabled(false);
+	//talon_rollers_lift_right -> SetSafetyEnabled(true);
 
 	roller_left = new CANTalon(ROLLERS_MOTOR_LEFT);	// create talon rollers these are pwm
 	roller_right = new CANTalon(ROLLERS_MOTOR_RIGHT);
@@ -57,10 +57,10 @@ void Rollers::Roll(bool forward, double _speed) {
 void Rollers::Roller_Lift(float magnitude) {
 	// limit = limitSwitchUp
 	talon_rollers_lift_left->Set(magnitude);
-	talon_rollers_lift_right->Set(-magnitude);
+	// talon_rollers_lift_right->Set(-magnitude);
 
-	//down = roller_down->GetVoltage();
-	SmartDashboard::PutNumber("Roller down", down);
+	// down = roller_down->GetVoltage();
+	// SmartDashboard::PutNumber("Roller down", down);
 }
 
 bool Rollers::CheckRoll(double _duration) {

@@ -23,11 +23,11 @@ private:
 		// creat the auto sequence chooser
 		chooser = new SendableChooser();
 		// Auto 1 is the default
-		chooser->AddDefault("Auto 1", new Autonomous_Sequences(1));
-		chooser->AddObject("Auto 2", new Autonomous_Sequences(2));
-		chooser->AddObject("Auto 3", new Autonomous_Sequences(3));
-		chooser->AddObject("Auto 4", new Autonomous_Sequences(4));
-		chooser->AddObject("Auto 5", new Autonomous_Sequences(5));
+		chooser->AddObject("Auto 1 - Do nothing.", new Autonomous_Sequences(1));
+		chooser->AddObject("Auto 2 - Go forward slow, then fast, then slow", new Autonomous_Sequences(2));
+		chooser->AddDefault("Auto 3 - Go forward", new Autonomous_Sequences(3));
+		chooser->AddObject("Auto 4 - INDEV DO NOT USE", new Autonomous_Sequences(4));
+		chooser->AddObject("Auto 5 - Same as auto two but raises the roller first", new Autonomous_Sequences(5));
 		//add the auto selector to the dashboard
 		SmartDashboard::PutData("AutoMode", chooser);
 

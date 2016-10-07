@@ -13,7 +13,7 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 	CANTalon* talon_rollers_lift_left;
-	CANTalon* talon_rollers_lift_right;
+	// CANTalon* talon_rollers_lift_right;
 	CANTalon* roller_left;
 	CANTalon* roller_right;
 	double duration;

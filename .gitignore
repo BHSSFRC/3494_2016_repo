@@ -33,5 +33,5 @@
 
 # XML from eclipse
 *.xml
-*.settings.xml
-3494_2016_robot/.settings/language.settings.xml
+*.settings.*
+ 3494_2016_robot/.settings/language.settings.xml
