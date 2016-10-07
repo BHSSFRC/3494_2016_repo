@@ -1,5 +1,5 @@
 # 3494_training
-The code behind FRC team 3494's 2016 robit. This time ~~hopefully~~ set up right on Github.
+The code behind FRC team 3494's 2016 robot. This time ~~hopefully~~ set up right on Github.
 
 New programmers are to refer to [gettingstarted.md](gettingstarted.md)
 
@@ -12,8 +12,8 @@ New programmers are to refer to [gettingstarted.md](gettingstarted.md)
 5. ???
 6. Profit
 
-Never, ever, ***EVER*** push a commit directly to master. 
+Never, ever, ***EVER*** push a commit directly to master.
 
-***EVER.*** 
-
-The only commits on master should be merge commits from pull requests. This (helps) prevent conflicts.
+***EVER.***
+---
+note that all dates in this repo are in month/day/year format. 
