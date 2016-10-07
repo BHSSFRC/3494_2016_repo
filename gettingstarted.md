@@ -2,7 +2,7 @@ Alright new programmer from now on your job is very simple: you are going to pun
 
 *In the face.*
 
-All jokes aside, this is the software you need to start programming as of September 10th, 2016.
+All jokes aside, this is the software you need to start programming as of 9/10/2016.
 
 * [Eclipse __MARS__](https://eclipse.org/downloads/packages/release/Mars/2)
  * Remember if you get the 64-bit version or the 32 bit version.
