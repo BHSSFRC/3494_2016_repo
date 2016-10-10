@@ -43,7 +43,8 @@ OI::OI() {
 	button10_2 = new JoystickButton(controller_2, 10);
 	button11_2 = new JoystickButton(controller_2, 11);
 	button12_2 = new JoystickButton(controller_2, 12);
-	//controller 3, xbox controller as opposed to a flight stick
+	// controller 3, xbox controller as opposed to a flight stick
+	// TODO: Phase this out so we only need the flight sticks
 	buttonA_3 = new JoystickButton(controller_3, 1);
 	buttonB_3 = new JoystickButton(controller_3, 2);
 	buttonX_3 = new JoystickButton(controller_3, 3);
@@ -70,7 +71,7 @@ OI::OI() {
 
 /////////////////////////////////////////////////////////////////////
 
-	//xbox controls, currently unused
+	// xbox controls
 	buttonB_3->WhenPressed(new Lift_Set(true));
 	buttonX_3->WhenPressed(new Lift_Set(false));
 	//move camera arm, true = up
@@ -90,14 +91,14 @@ float OI::GetJoystickY() {
 	return 1 * controller->GetRawAxis(1);
 }
 
-/*float OI::GetRightJoystick() {
+/*
+ float OI::GetRightJoystick() {
 	return -1 * controller->GetRawAxis(5);
 }
 */
 double OI::GetJoystick_2Y(){
 	return -1 * controller_2->GetRawAxis(1);
 }
-
 /*
 double OI::GetRightJoystick_2(){
 	return -1 * controller_2->GetRawAxis(5);
