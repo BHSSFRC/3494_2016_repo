@@ -12,9 +12,7 @@ If you are a programmer who is actually working as part of the team, work as fol
  * Feel free to merge other people's branches in to your own.
 4. When you finish what you were assigned to do, merge your branch into `develop` using a pull request.
  * ***DO NOT MERGE INTO MASTER. EVER. YES, THIS IS A THREAT.***
-5. Go back to step one.
-6. ???
-7. Profit
+5. repeat until the end of the season
 
 ## Outside contributions
 
