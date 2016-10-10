@@ -70,10 +70,10 @@ void Autonomous_Sequences::auto4() {
 	SmartDashboard::PutBoolean("Auto4 State", four);
 	// this is the fancy one
 	// TODO: write fancy auto code
-	if (backto){
+	if (backto) {
 		AddSequential(new Turn(180));
 	}
-	if (defense == "low bar" or "bar"){
+	if (defense == "low bar" or "bar") {
 		AddSequential(new Auto_Move_Tim(0.75, 0.75, 5));
 	}
 	else if (defense == "ramparts") {
@@ -91,9 +91,8 @@ void Autonomous_Sequences::auto4() {
 	}
 
 	AddSequential(new Auto_Move_Tim(.50, .50, 1.5)); // worked when 3% was shaved off of left side
-	AddSequential(new Auto_Move_Tim(1, 1, 1.5)); //
-	AddSequential(new Auto_Move_Tim(.70, .70, 1)); //
-
+	AddSequential(new Auto_Move_Tim(1, 1, 1.5));
+	AddSequential(new Auto_Move_Tim(.70, .70, 1));
 }
 
 void Autonomous_Sequences::auto5() {
