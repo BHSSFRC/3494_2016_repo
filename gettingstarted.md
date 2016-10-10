@@ -11,7 +11,7 @@ All jokes aside, this is the software you need to start programming as of 10/10/
  * Make sure you have the 32 bit version if you got 32 bit Eclipse or 64 or 64 bit.
 * The FRC Eclipse plugins
  * The instructions are here [in image format.](http://imgur.com/LghDdZ0)
-* [MinGW](http://downloads.sourceforge.net/project/mingw/Installer/mingw-get-setup.exe?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fmingw%2Ffiles%2FInstaller%2F&ts=1473376643&use_mirror=superb-sea2)
+* [MinGW](http://downloads.sourceforge.net/project/mingw/Installer/mingw-get-setup.exe?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fmingw%2Ffiles%2FInstaller%2F&ts=1473376643&use_mirror=superb-sea2) (or another C++ compiler for your OS of choice.)
  * No, we aren't switching from C++.
  * If you need help with setting up MinGW, ***ASK***.
 * [NavX C++ libraries](http://www.pdocs.kauailabs.com/navx-mxp/software/roborio-libraries/c/), because who knows maybe we *will* use the gyroscope this year.
