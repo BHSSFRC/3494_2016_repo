@@ -10,5 +10,6 @@ See [CONTRIBUTING.md](https://github.com/BHSSFRC/3494_training/blob/master/CONTR
 Never, ever, ***EVER*** push a commit directly to master.
 
 ***EVER.***
+
 ---
 note that all dates in this repo are in month/day/year format.
