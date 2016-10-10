@@ -10,15 +10,14 @@ Autonomous_Sequences::Autonomous_Sequences(int autoMode) {
 	SmartDashboard::init();
 	one = false; // these are the autonomous states
 	two = false;
-	three = true;
+	three = true; // set three true by default (aka always)
 	four = false;
 	five = false;
 	//test of reading from smart dashboard
 	prefs = Preferences::GetInstance();
 	backto = false;
 	defense = "Bernie Sanders";
-	if (autoMode == 1) // checks smart dashboard for what the user has selected the default is 1
-	{
+	if (autoMode == 1) {
 		auto1();
 		one = true;
 	}
