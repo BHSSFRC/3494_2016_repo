@@ -8,7 +8,7 @@ All jokes aside, this is the software you need to start programming as of 10/10/
  * Remember if you get the 64-bit version or the 32 bit version.
 * [The FRC update suite](http://www.ni.com/download/first-robotics-software-2016/5773/en) - this is the 2016 version, and you need the serial number off of the package that we got in the kit of parts.
 * [The Oracle JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
- * Make sure you have the 32 bit version if you got 32 bit Eclipse or 64 or 64 bit.
+ * Make sure you have the 32 bit version if you got 32 bit Eclipse or 64 bit if you got 64 bit Eclipse (i.e. they must match).
 * The FRC Eclipse plugins
  * The instructions are here [in image format.](http://imgur.com/LghDdZ0)
 * [MinGW](http://downloads.sourceforge.net/project/mingw/Installer/mingw-get-setup.exe?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fmingw%2Ffiles%2FInstaller%2F&ts=1473376643&use_mirror=superb-sea2) (or another C++ compiler for your OS of choice.)
