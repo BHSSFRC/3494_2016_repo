@@ -13,7 +13,8 @@ If you are a programmer who is part of the team, work as follows:
 4. When you finish what you were assigned to do, merge your branch into `develop` using a pull request.
  * At least try to describe what you did.
  * ***DO NOT MERGE INTO MASTER. EVER. YES, THIS IS A THREAT.***
-5. repeat until the end of the season.
+5. If your pull request is merged, you may delete your feature branch. 
+6. repeat until the end of the season.
 
 ## Outside contribution
 
