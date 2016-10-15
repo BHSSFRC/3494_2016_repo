@@ -76,23 +76,23 @@ void Autonomous_Sequences::auto4() {
 	if (defense == "low bar" or "bar") {
 		AddSequential(new Auto_Move_Tim(0.75, 0.75, 5));
 	}
-	else if (defense == "ramparts") {
+	else if (defense == "ramparts" or defense == "ramps") {
 		//ramps
 		AddSequential(new Auto_Move_Tim(0.75, 0.75, 2.5));
 		AddSequential(new Auto_Move_Tim(1, 1, 3));
 	}
 	else if (defense == "moat") {
-		AddSequential(new Auto_Move_Tim(.75, .75,1)); //
-		AddSequential(new Auto_Move_Tim(1, 1, 1.5)); //
+		AddSequential(new Auto_Move_Tim(.75, .75,1));
+		AddSequential(new Auto_Move_Tim(1, 1, 1.5));
 		AddSequential(new Auto_Move_Tim(.70, .70, 1));
 	}
 	else {
 		std::cout << "I'm amazed. " << defense << " is on the field and not a defense.";
 	}
 
-	AddSequential(new Auto_Move_Tim(.50, .50, 1.5)); // worked when 3% was shaved off of left side
-	AddSequential(new Auto_Move_Tim(1, 1, 1.5));
-	AddSequential(new Auto_Move_Tim(.70, .70, 1));
+	// AddSequential(new Auto_Move_Tim(.50, .50, 1.5)); // worked when 3% was shaved off of left side
+	// AddSequential(new Auto_Move_Tim(1, 1, 1.5));
+	// AddSequential(new Auto_Move_Tim(.70, .70, 1));
 }
 
 void Autonomous_Sequences::auto5() {
