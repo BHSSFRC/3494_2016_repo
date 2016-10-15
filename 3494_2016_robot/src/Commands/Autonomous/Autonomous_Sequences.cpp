@@ -53,8 +53,8 @@ void Autonomous_Sequences::auto2() // auto for moat
 	//AddSequential(new Auto_Move_Tim(.75,1));
 	// this is the time and power for approaching defence
 	AddSequential(new Auto_Move_Tim(.69, .75, 1)); // worked when 3% was shaved off of left side
-	AddSequential(new Auto_Move_Tim(.94, 1, 1.5)); //
-	AddSequential(new Auto_Move_Tim(.64, 0.70, 0.7)); //
+	AddSequential(new Auto_Move_Tim(.94, 1, 1.5));
+	AddSequential(new Auto_Move_Tim(.64, 0.70, 0.7));
 
 	SmartDashboard::PutBoolean("Auto2 State", two);
 }
@@ -63,7 +63,7 @@ void Autonomous_Sequences::auto3() // This is for approaching defence
 {
 	SmartDashboard::PutBoolean("Auto3 State", three);
 	// AddSequential(new Auto_Roller_Lift(1.5, .5)); // goes down with 50% power
-	AddSequential(new Auto_Move_Tim(0.75, 0.75, 2)); // perfect time = 1 second and .75 power
+	AddSequential(new Auto_Move_Tim(0.95, 1, 2)); // perfect time = 1 second and .75 power
 }
 
 void Autonomous_Sequences::auto4() {
@@ -76,27 +76,27 @@ void Autonomous_Sequences::auto4() {
 	if (defense == "low bar" or "bar") {
 		AddSequential(new Auto_Move_Tim(0.75, 0.75, 5));
 	}
-	else if (defense == "ramparts") {
+	else if (defense == "ramparts" or defense == "ramps") {
 		//ramps
 		AddSequential(new Auto_Move_Tim(0.75, 0.75, 2.5));
 		AddSequential(new Auto_Move_Tim(1, 1, 3));
 	}
 	else if (defense == "moat") {
-		AddSequential(new Auto_Move_Tim(.75, .75,1)); //
-		AddSequential(new Auto_Move_Tim(1, 1, 1.5)); //
+		AddSequential(new Auto_Move_Tim(.75, .75,1));
+		AddSequential(new Auto_Move_Tim(1, 1, 1.5));
 		AddSequential(new Auto_Move_Tim(.70, .70, 1));
 	}
 	else {
 		std::cout << "I'm amazed. " << defense << " is on the field and not a defense.";
 	}
 
-	AddSequential(new Auto_Move_Tim(.50, .50, 1.5)); // worked when 3% was shaved off of left side
-	AddSequential(new Auto_Move_Tim(1, 1, 1.5));
-	AddSequential(new Auto_Move_Tim(.70, .70, 1));
+	// AddSequential(new Auto_Move_Tim(.50, .50, 1.5)); // worked when 3% was shaved off of left side
+	// AddSequential(new Auto_Move_Tim(1, 1, 1.5));
+	// AddSequential(new Auto_Move_Tim(.70, .70, 1));
 }
 
 void Autonomous_Sequences::auto5() {
-	//please ensure we always have a blank auto program
+	// please ensure we always have a blank auto program
 	SmartDashboard::PutBoolean("Auto5 State", five);
 
 	AddSequential(new Auto_Roller_Lift(.8, .5));
@@ -104,6 +104,7 @@ void Autonomous_Sequences::auto5() {
 	AddSequential(new Auto_Move_Tim(1, 1, 1.5)); //
 	AddSequential(new Auto_Move_Tim(0.70, 0.70, 1)); //
 }
+
 void Autonomous_Sequences::Initialize() // pure virtual function needing defined doesn't have any other use
 {
 }
@@ -112,8 +113,8 @@ void Autonomous_Sequences::Execute() // pure virtual function needing defined
 {
 }
 
-bool Autonomous_Sequences::IsFinished() // pure virtual function needing defined
-{
+bool Autonomous_Sequences::IsFinished() {
+	// pure virtual function needing defined
 	return true; // skip this warning because the function is not meant to be used
 }
 
