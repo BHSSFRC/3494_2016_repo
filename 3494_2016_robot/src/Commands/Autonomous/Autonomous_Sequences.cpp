@@ -90,9 +90,9 @@ void Autonomous_Sequences::auto4() {
 		std::cout << "I'm amazed. " << defense << " is on the field and not a defense.";
 	}
 
-	AddSequential(new Auto_Move_Tim(.50, .50, 1.5)); // worked when 3% was shaved off of left side
-	AddSequential(new Auto_Move_Tim(1, 1, 1.5));
-	AddSequential(new Auto_Move_Tim(.70, .70, 1));
+	// AddSequential(new Auto_Move_Tim(.50, .50, 1.5)); // worked when 3% was shaved off of left side
+	// AddSequential(new Auto_Move_Tim(1, 1, 1.5));
+	// AddSequential(new Auto_Move_Tim(.70, .70, 1));
 }
 
 void Autonomous_Sequences::auto5() {
