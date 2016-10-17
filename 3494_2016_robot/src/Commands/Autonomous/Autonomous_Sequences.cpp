@@ -8,11 +8,11 @@
 Autonomous_Sequences::Autonomous_Sequences(int autoMode) {
 
 	SmartDashboard::init();
-	one = false; // these are the autonomous states
-	two = false;
-	three = true; // set three true by default (aka always)
-	four = false;
-	five = false;
+	bool one = false; // these are the autonomous states
+	bool two = false;
+	bool three = false;
+	bool four = false;
+	bool five = false;
 	//test of reading from smart dashboard
 	prefs = Preferences::GetInstance();
 	backto = false;
