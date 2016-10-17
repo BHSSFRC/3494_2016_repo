@@ -30,10 +30,10 @@ Autonomous_Sequences::Autonomous_Sequences(int autoMode) {
 		three = true;
 	}
 	else if (autoMode == 4) {
-		four = true;
 		defense = prefs->GetString("defense", "Flowey the Flower");
 		backto = prefs->GetBoolean("back to", false);
 		auto4();
+		four = true;
 	}
 	else if (autoMode == 5) {
 		auto5();
