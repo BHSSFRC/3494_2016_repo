@@ -3,8 +3,7 @@ The code behind FRC team 3494's 2016 robot. This time ~~hopefully~~ set up right
 
 New programmers are to refer to [gettingstarted.md](gettingstarted.md)
 
-**HOW TO USE THIS REPOSITORY**
-
+## HOW TO USE THIS REPOSITORY
 See [CONTRIBUTING.md](https://github.com/BHSSFRC/3494_training/blob/master/CONTRIBUTING.md)
 
 Never, ever, ***EVER*** push a commit directly to master.
