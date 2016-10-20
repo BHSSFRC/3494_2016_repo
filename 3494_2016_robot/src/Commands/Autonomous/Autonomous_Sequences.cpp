@@ -30,7 +30,7 @@ Autonomous_Sequences::Autonomous_Sequences(int autoMode) {
 		three = true;
 	}
 	else if (autoMode == 4) {
-		defense = prefs->GetString("defense", "Flowey the Flower");
+		defense = prefs->GetString("defense", "moat");
 		backto = prefs->GetBoolean("back to", false);
 		auto4();
 		four = true;
@@ -52,7 +52,7 @@ void Autonomous_Sequences::auto2() // auto for moat
 {
 	//AddSequential(new Auto_Move_Tim(.75,1));
 	// this is the time and power for approaching defence
-	AddSequential(new Auto_Move_Tim(.69, .75, 1)); // worked when 3% was shaved off of left side
+	AddSequential(new Auto_Move_Tim(.69, .75, 1));
 	AddSequential(new Auto_Move_Tim(.94, 1, 1.5));
 	AddSequential(new Auto_Move_Tim(.64, 0.70, 0.7));
 
@@ -77,11 +77,11 @@ void Autonomous_Sequences::auto4() {
 		AddSequential(new Auto_Move_Tim(0.75, 0.75, 5));
 	}
 	else if (defense == "ramparts" or defense == "ramps") {
-		//ramps
+		// ramparts
 		AddSequential(new Auto_Move_Tim(0.75, 0.75, 2.5));
 		AddSequential(new Auto_Move_Tim(1, 1, 3));
 	}
-	else if (defense == "moat") {
+	else if (defense == "moat" or defense == "Moat") {
 		AddSequential(new Auto_Move_Tim(.75, .75,1));
 		AddSequential(new Auto_Move_Tim(1, 1, 1.5));
 		AddSequential(new Auto_Move_Tim(.70, .70, 1));
