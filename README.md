@@ -5,7 +5,7 @@ New programmers are to refer to [gettingstarted.md](gettingstarted.md)
 
 **HOW TO USE THIS REPOSITORY**
 
-See [CONTRIBUTING.md](https://github.com/BHSSFRC/3494_training/blob/master/CONTRIBUTING.md)
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 Never, ever, ***EVER*** push a commit directly to master.
 
