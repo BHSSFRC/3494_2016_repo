@@ -1,5 +1,6 @@
 # Object files
 *.o
+*.xml
 *.ko
 *.obj
 *.elf
@@ -30,6 +31,3 @@
 
 # Debug files
 *.dSYM/
-
-# XML from eclipse
-*.xml
