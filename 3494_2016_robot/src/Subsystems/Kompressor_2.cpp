@@ -2,8 +2,7 @@
 #include "../RobotMap.h"
 
 Kompressor_2::Kompressor_2() :
-		Subsystem("Kompressor")
-{
+		Subsystem("Kompressor") {
 	// TODO: Make this something we can toggle at will
 	// if there happens to be a compressor in the robot it will be ready
 	if (DO_WE_HAVE_A_COMPRESSOR) {

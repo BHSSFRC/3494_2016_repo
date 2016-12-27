@@ -6,16 +6,14 @@
 #include "WPILib.h"
 #include "../../Robotmap.h"
 
-class cam: public CommandBase
-{
+class cam: public CommandBase {
 private:
 	bool mode;
 	DoubleSolenoid* camera;
 public:
 	cam(bool _mode);
 	void Initialize();
-	void Execute();
-	bool IsFinished();
+	void Execute();bool IsFinished();
 	void End();
 	void Interrupted();
 };

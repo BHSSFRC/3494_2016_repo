@@ -5,9 +5,7 @@
 #include "WPILib.h"
 #include "AHRS.h"
 
-
-class Turn: public CommandBase
-{
+class Turn: public CommandBase {
 private:
 	AHRS *ahrs;
 
@@ -17,8 +15,7 @@ private:
 public:
 	Turn(float _turn);
 	void Initialize();
-	void Execute();
-	bool IsFinished();
+	void Execute();bool IsFinished();
 	void End();
 	void Interrupted();
 };

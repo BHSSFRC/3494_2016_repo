@@ -4,13 +4,11 @@
 #include "../../CommandBase.h"
 #include "WPILib.h"
 
-class CommandWinch: public CommandBase
-{
+class CommandWinch: public CommandBase {
 public:
 	CommandWinch();
 	void Initialize();
-	void Execute();
-	bool IsFinished();
+	void Execute();bool IsFinished();
 	void End();
 	void Interrupted();
 };

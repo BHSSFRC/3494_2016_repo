@@ -4,15 +4,13 @@
 #include "../../CommandBase.h"
 #include "WPILib.h"
 
-class Fail_NavX: public CommandBase
-{
+class Fail_NavX: public CommandBase {
 private:
 	bool fail;
 public:
 	Fail_NavX(bool fail_);
 	void Initialize();
-	void Execute();
-	bool IsFinished();
+	void Execute();bool IsFinished();
 	void End();
 	void Interrupted();
 };

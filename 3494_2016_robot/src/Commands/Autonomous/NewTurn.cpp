@@ -1,7 +1,6 @@
 #include "NewTurn.h"
 
-
-NewTurn::NewTurn(bool _left, double time, float _speed){
+NewTurn::NewTurn(bool _left, double time, float _speed) {
 	// Use Requires() here to declare subsystem dependencies
 	// eg. Requires(chassis);
 	Requires(CommandBase::driveTrain);
@@ -14,8 +13,7 @@ NewTurn::NewTurn(bool _left, double time, float _speed){
 }
 
 // Called just before this Command runs the first time
-void NewTurn::Initialize()
-{
+void NewTurn::Initialize() {
 	//CommandBase::driveTrain->ResetEncoders();
 	if (speed < 0) {
 		speed = speed * -1;
@@ -23,12 +21,10 @@ void NewTurn::Initialize()
 }
 
 // Called repeatedly when this Command is scheduled to run
-void NewTurn::Execute()
-{
+void NewTurn::Execute() {
 	if (left) {
 		CommandBase::driveTrain->TankDrive(0, speed * -1);
-	}
-	else {
+	} else {
 		CommandBase::driveTrain->TankDrive(0, speed);
 	}
 	Wait(letime);
@@ -36,20 +32,17 @@ void NewTurn::Execute()
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool NewTurn::IsFinished()
-{
+bool NewTurn::IsFinished() {
 	return true;
 }
 
 // Called once after isFinished returns true
-void NewTurn::End()
-{
+void NewTurn::End() {
 
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void NewTurn::Interrupted()
-{
+void NewTurn::Interrupted() {
 
 }

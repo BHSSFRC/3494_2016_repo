@@ -5,16 +5,15 @@
 #include "ctime"
 #include "math.h"
 DriveTrain::DriveTrain() :
-		Subsystem("DriveTrain")
-{
+		Subsystem("DriveTrain") {
 	NavXFail = true;
 	ramp = 0;
 	timeElapsed = 0.0;
 	duration = 0.0;
 ////////////////////////////////////////////////////////////
-	LeftTalonMaster = new CANTalon(LEFT_MOTOR_MASTER);			//	Left CANTalon motor subgroup
-	LeftTalonFollower = new CANTalon(LEFT_MOTOR_FOLLOWER);		//	1 talon is assigned for each CIM
-	LeftTalonFollower_2 = new CANTalon(LEFT_MOTOR_FOLLOWER_2);	//	3 CIM per gearbox
+	LeftTalonMaster = new CANTalon(LEFT_MOTOR_MASTER);//	Left CANTalon motor subgroup
+	LeftTalonFollower = new CANTalon(LEFT_MOTOR_FOLLOWER);//	1 talon is assigned for each CIM
+	LeftTalonFollower_2 = new CANTalon(LEFT_MOTOR_FOLLOWER_2);//	3 CIM per gearbox
 
 	LeftTalonMaster->EnableControl();
 	LeftTalonMaster->SetSafetyEnabled(false);
@@ -30,24 +29,24 @@ DriveTrain::DriveTrain() :
 	LeftTalonMaster->ConfigEncoderCodesPerRev(256);
 ////////////////////////////////////////////////////////////
 	//encoder things
-	static double WHEEL_DIAMETER =  3.939;
+	static double WHEEL_DIAMETER = 3.939;
 	static double GEAR_RATIO = 2.50;
 	//may need to set to 360
 	//static double PULSE_PER_REVOLUTION = 256;
-	Rpulse = ((3.14 * (WHEEL_DIAMETER/GEAR_RATIO)));
-	Lpulse = ((3.14 * (WHEEL_DIAMETER/GEAR_RATIO)));
+	Rpulse = ((3.14 * (WHEEL_DIAMETER / GEAR_RATIO)));
+	Lpulse = ((3.14 * (WHEEL_DIAMETER / GEAR_RATIO)));
 ////////////////////////////////////////////////////////////
-/*
-	LeftTalonMaster->SetVoltageRampRate(RAMP);
-	LeftTalonFollower->SetVoltageRampRate(RAMP);
-	LeftTalonFollower_2->SetVoltageRampRate(RAMP);
-	RightTalonMaster->SetVoltageRampRate(RAMP);
-	RightTalonFollower->SetVoltageRampRate(RAMP);
-	RightTalonFollower_2->SetVoltageRampRate(RAMP);
-*/
+	/*
+	 LeftTalonMaster->SetVoltageRampRate(RAMP);
+	 LeftTalonFollower->SetVoltageRampRate(RAMP);
+	 LeftTalonFollower_2->SetVoltageRampRate(RAMP);
+	 RightTalonMaster->SetVoltageRampRate(RAMP);
+	 RightTalonFollower->SetVoltageRampRate(RAMP);
+	 RightTalonFollower_2->SetVoltageRampRate(RAMP);
+	 */
 ////////////////////////////////////////////////////////////
-	RightTalonMaster = new CANTalon (RIGHT_MOTOR_MASTER);		//	Right Talon motor subgroup
-	RightTalonFollower = new CANTalon(RIGHT_MOTOR_FOLLOWER);	//	Same parameters as for the Left talons
+	RightTalonMaster = new CANTalon(RIGHT_MOTOR_MASTER);//	Right Talon motor subgroup
+	RightTalonFollower = new CANTalon(RIGHT_MOTOR_FOLLOWER);//	Same parameters as for the Left talons
 	RightTalonFollower_2 = new CANTalon(RIGHT_MOTOR_FOLLOWER_2);
 	RightTalonMaster->EnableControl();
 	RightTalonMaster->SetSafetyEnabled(false);
@@ -100,8 +99,7 @@ void DriveTrain::TankDrive(float leftAxis, float rightAxis) {
 	if (leftAxis < -.20 && rightAxis > .20) {
 		RightTalonMaster->SetVoltageRampRate(37);
 		LeftTalonMaster->SetVoltageRampRate(37);
-	}
-	else {
+	} else {
 		RightTalonMaster->SetVoltageRampRate(RAMP);
 		LeftTalonMaster->SetVoltageRampRate(RAMP);
 	}
@@ -118,11 +116,9 @@ void DriveTrain::TankDrive(float leftAxis, float rightAxis) {
 		// 12 = penalty (we dipped to low)
 		if (angle < -7) {
 			ramp = (16 + (angle)); // the ramp rate will slow down even more if the robot dips more
-		}
-		else if (angle > 7) {
+		} else if (angle > 7) {
 			ramp = (16 - angle); // if the robot dips backwards then this will compensate
-		}
-		else {
+		} else {
 			ramp = 0; // if the robot is just fine then there is no ramp rate
 		}
 	}
@@ -135,31 +131,35 @@ int DriveTrain::PowerDistOutput() {
 }
 
 /*int DriveTrain::IndPowerOutput(int PDP_Channel) {
-	//Gathers the individual channel
-	return pdp->GetCurrent(PDP_Channel);
-}
-*/
+ //Gathers the individual channel
+ return pdp->GetCurrent(PDP_Channel);
+ }
+ */
 
 //checks
 float DriveTrain::PowerSide(int value) {
 	int value_ = value;
-	float left_side = pdp->GetCurrent(LEFT_MOTOR_MASTER) + pdp->GetCurrent(LEFT_MOTOR_FOLLOWER) + pdp->GetCurrent(LEFT_MOTOR_FOLLOWER_2);
+	float left_side = pdp->GetCurrent(LEFT_MOTOR_MASTER)
+			+ pdp->GetCurrent(LEFT_MOTOR_FOLLOWER)
+			+ pdp->GetCurrent(LEFT_MOTOR_FOLLOWER_2);
 
-	float right_side = pdp->GetCurrent(RIGHT_MOTOR_MASTER) + pdp->GetCurrent(RIGHT_MOTOR_FOLLOWER) + pdp->GetCurrent(RIGHT_MOTOR_FOLLOWER_2);
-		// 13 14 15// 0 1 2
+	float right_side = pdp->GetCurrent(RIGHT_MOTOR_MASTER)
+			+ pdp->GetCurrent(RIGHT_MOTOR_FOLLOWER)
+			+ pdp->GetCurrent(RIGHT_MOTOR_FOLLOWER_2);
+	// 13 14 15// 0 1 2
 	if (value_ == 0) {
 		return (left_side);
 	}
 	if (value_ == 1) {
 		return (right_side);
-	}
-	else {
+	} else {
 		return (0);
 	}
 }
 
 double DriveTrain::GetPosition() {
-	return ((-1 * LeftTalonMaster->GetEncPosition() * Rpulse) + (RightTalonMaster->GetEncPosition() * Rpulse));
+	return ((-1 * LeftTalonMaster->GetEncPosition() * Rpulse)
+			+ (RightTalonMaster->GetEncPosition() * Rpulse));
 	//  this will be uncommented when the measurements are correct
 }
 
@@ -175,21 +175,27 @@ void DriveTrain::ResetEncoders() {
 bool DriveTrain::TestDriveTrain() {
 	//start = std::clock();
 	//runs 99 times. this is why "button 7" is a bad word.
-	for(int a = 0; a < 99;a++) {
-		TankDrive(-0.75,0.75);
+	for (int a = 0; a < 99; a++) {
+		TankDrive(-0.75, 0.75);
 		rightCurrent = PowerSide(1);
 		leftCurrent = PowerSide(0);
 		//total motors
 		SmartDashboard::PutNumber("Left Current", leftCurrent);
 		SmartDashboard::PutNumber("Right Current", rightCurrent);
 		//induviddual motors
-		SmartDashboard::PutNumber("Left Current 1", pdp->GetCurrent(LEFT_MOTOR_MASTER));
-		SmartDashboard::PutNumber("Left Current 2", pdp->GetCurrent(LEFT_MOTOR_FOLLOWER));
-		SmartDashboard::PutNumber("Left Current 3", pdp->GetCurrent(LEFT_MOTOR_FOLLOWER_2));
+		SmartDashboard::PutNumber("Left Current 1",
+				pdp->GetCurrent(LEFT_MOTOR_MASTER));
+		SmartDashboard::PutNumber("Left Current 2",
+				pdp->GetCurrent(LEFT_MOTOR_FOLLOWER));
+		SmartDashboard::PutNumber("Left Current 3",
+				pdp->GetCurrent(LEFT_MOTOR_FOLLOWER_2));
 
-		SmartDashboard::PutNumber("Right Current 1", pdp->GetCurrent(RIGHT_MOTOR_MASTER));
-		SmartDashboard::PutNumber("Right Current 2", pdp->GetCurrent(RIGHT_MOTOR_FOLLOWER));
-		SmartDashboard::PutNumber("Right Current 3", pdp->GetCurrent(RIGHT_MOTOR_FOLLOWER_2));
+		SmartDashboard::PutNumber("Right Current 1",
+				pdp->GetCurrent(RIGHT_MOTOR_MASTER));
+		SmartDashboard::PutNumber("Right Current 2",
+				pdp->GetCurrent(RIGHT_MOTOR_FOLLOWER));
+		SmartDashboard::PutNumber("Right Current 3",
+				pdp->GetCurrent(RIGHT_MOTOR_FOLLOWER_2));
 		//timeElapsed = (std::clock() + start)/(double)CLOCKS_PER_SEC;
 	}
 
@@ -203,22 +209,21 @@ bool DriveTrain::TestDriveTrain() {
 // the axis value, which is negative, is negated to be positive
 // The value is then taken to a power and then multiplied by the sign value
 /*
-	if (leftAxis < 0) {
-		leftSign = -1;
-		leftAxis = leftAxis * -1;
-	}
+ if (leftAxis < 0) {
+ leftSign = -1;
+ leftAxis = leftAxis * -1;
+ }
 
-	if (rightAxis < 0) {
-		rightSign = -1;
-		rightAxis = rightAxis * -1;
-	}
+ if (rightAxis < 0) {
+ rightSign = -1;
+ rightAxis = rightAxis * -1;
+ }
 
-	float leftValue = leftSign * pow(leftAxis, power);
+ float leftValue = leftSign * pow(leftAxis, power);
 
-	float rightValue = rightSign * pow(rightAxis, power);
-	*/
-	//drive the master talons. the others /will/ follow.
-
+ float rightValue = rightSign * pow(rightAxis, power);
+ */
+//drive the master talons. the others /will/ follow.
 void DriveTrain::Fail_NavX(bool fail) {
 	NavXFail = fail;
 }

@@ -3,11 +3,10 @@
 #include "../RobotMap.h"
 
 Climber::Climber() :
-		Subsystem("Climber")
-{
+		Subsystem("Climber") {
 /////////////////////////////////////////////////////////////////
 
-	WenchTalon_1 = new Talon(TALON_WINCH_1);	// will switch to srx during competition
+	WenchTalon_1 = new Talon(TALON_WINCH_1);// will switch to srx during competition
 	WenchTalon_1->SetSafetyEnabled(false);
 
 	WenchTalon_2 = new Talon(TALON_WINCH_2);
@@ -33,11 +32,10 @@ void Climber::InitDefaultCommand() {
 // here. Call these from Commands.
 void Climber::Winch(bool _clockwise) {
 	bool clockwise = _clockwise; // if true then the dpad value is 0
-	if (clockwise){
+	if (clockwise) {
 		WenchTalon_1->Set(110); // values are the same because of mechanical
 		WenchTalon_2->Set(-110);
-	}
-	else {						// if 180 then the value sent is false
+	} else {						// if 180 then the value sent is false
 		WenchTalon_1->Set(-255);
 		WenchTalon_2->Set(255);
 	}
@@ -48,7 +46,7 @@ void Climber::Winch(bool _clockwise) {
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
 }
-void Climber::StopWinch(){ // wench stop when neither is present
+void Climber::StopWinch() { // wench stop when neither is present
 	WenchTalon_1->Set(0);
 	WenchTalon_2->Set(0);
 }
@@ -56,19 +54,17 @@ void Climber::StopWinch(){ // wench stop when neither is present
 void Climber::Setter(bool forward) {
 	if (forward) {
 		solenoid_climber_arm->Set(solenoid_climber_arm->kForward);
-	}
-	else if (forward == false) {
+	} else if (forward == false) {
 		solenoid_climber_arm->Set(solenoid_climber_arm->kReverse);
 	}
 }
 
 void Climber::ChangeGear(bool _gear) {
-	if (_gear){
+	if (_gear) {
 		shifter->Set(shifter->kForward);
-	}
-	else if (_gear == false) {
-			shifter->Set(shifter->kReverse);
-			//SmartDashboard::PutBoolean("Gear", _gear);
+	} else if (_gear == false) {
+		shifter->Set(shifter->kReverse);
+		//SmartDashboard::PutBoolean("Gear", _gear);
 	}
 	SmartDashboard::PutBoolean("Gear", _gear);
 }

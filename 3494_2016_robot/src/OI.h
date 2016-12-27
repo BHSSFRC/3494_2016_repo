@@ -3,8 +3,7 @@
 
 #include "WPILib.h"
 
-class OI
-{
+class OI {
 private:
 	Joystick* controller;
 	Joystick* controller_2;

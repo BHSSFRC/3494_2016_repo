@@ -18,8 +18,7 @@ void cam::Execute() {
 	if (mode) {
 		camera->Set(camera->kForward);
 		SmartDashboard::PutBoolean("Camera Up", true);
-	}
-	else if (!mode) {
+	} else if (!mode) {
 		camera->Set(camera->kReverse);
 		SmartDashboard::PutBoolean("Camera Up", false);
 	}

@@ -4,16 +4,14 @@
 #include "../../CommandBase.h"
 #include "WPILib.h"
 
-class Move_Check: public CommandBase
-{
+class Move_Check: public CommandBase {
 private:
-float test_time;
+	float test_time;
 public:
 	Move_Check(float _time);
 
 	void Initialize();
-	void Execute();
-	bool IsFinished();
+	void Execute();bool IsFinished();
 	void End();
 	void Interrupted();
 };

@@ -16,13 +16,12 @@ void Rollers_lift::Execute() {
 
 	if (dpad == 180 || oi->GetA()) {
 		CommandBase::roller->Roller_Lift(1);
-	}
-	else if (dpad == 0 || oi->GetY()) {
+	} else if (dpad == 0 || oi->GetY()) {
 		CommandBase::roller->Roller_Lift(-1);
 	}
 	/*else if (dpad == 90 || oi->GetRightBumper()) {
-		CommandBase::roller->Roller_Lift(-1);
-	}*/
+	 CommandBase::roller->Roller_Lift(-1);
+	 }*/
 	else {
 		CommandBase::roller->Roller_Lift(0);
 	}

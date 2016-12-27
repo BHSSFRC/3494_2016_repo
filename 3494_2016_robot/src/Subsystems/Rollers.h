@@ -7,8 +7,7 @@
 #include <ctime>
 #include "../CommandBase.h"
 
-class Rollers: public Subsystem
-{
+class Rollers: public Subsystem {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
@@ -34,8 +33,7 @@ private:
 public:
 	Rollers();
 	void InitDefaultCommand();
-	void Roll(bool forward, double _speed);
-	bool CheckRoll(double _duration);
+	void Roll(bool forward, double _speed);bool CheckRoll(double _duration);
 	void Roller_Lift(float magnitude);
 };
 

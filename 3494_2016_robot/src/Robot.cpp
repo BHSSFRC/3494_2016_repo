@@ -7,7 +7,6 @@
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 
-
 class Robot: public IterativeRobot {
 private:
 	std::unique_ptr<Command> autonomousCommand;
@@ -24,10 +23,14 @@ private:
 		chooser = new SendableChooser();
 		// Auto 1 is the default
 		chooser->AddObject("Auto 1 - Do nothing.", new Autonomous_Sequences(1));
-		chooser->AddObject("Auto 2 - Go forward slow, then fast, then slow", new Autonomous_Sequences(2));
+		chooser->AddObject("Auto 2 - Go forward slow, then fast, then slow",
+				new Autonomous_Sequences(2));
 		chooser->AddDefault("Auto 3 - Go forward", new Autonomous_Sequences(3));
-		chooser->AddObject("Auto 4 - INDEV DO NOT USE", new Autonomous_Sequences(4));
-		chooser->AddObject("Auto 5 - Same as auto two but raises the roller first", new Autonomous_Sequences(5));
+		chooser->AddObject("Auto 4 - INDEV DO NOT USE",
+				new Autonomous_Sequences(4));
+		chooser->AddObject(
+				"Auto 5 - Same as auto two but raises the roller first",
+				new Autonomous_Sequences(5));
 		//add the auto selector to the dashboard
 		SmartDashboard::PutData("AutoMode", chooser);
 
@@ -39,10 +42,10 @@ private:
 	}
 
 	/**
-     * This function is called once each time the robot enters Disabled mode.
-     * You can use it to reset any subsystem information you want to clear when
+	 * This function is called once each time the robot enters Disabled mode.
+	 * You can use it to reset any subsystem information you want to clear when
 	 * the robot is disabled.
-     */
+	 */
 	void DisabledInit() {
 	}
 
@@ -60,8 +63,8 @@ private:
 	 * or additional comparisons to the if-else structure below with additional strings & commands.
 	 */
 	void AutonomousInit() {
-		autonomousSequences = (Command*)chooser->GetSelected();
-		if (autonomousSequences != NULL){
+		autonomousSequences = (Command*) chooser->GetSelected();
+		if (autonomousSequences != NULL) {
 			autonomousSequences->Start();
 		}
 	}

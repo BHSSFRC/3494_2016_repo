@@ -4,15 +4,13 @@
 #include "../../CommandBase.h"
 #include "WPILib.h"
 
-class Roller_Check: public CommandBase
-{
+class Roller_Check: public CommandBase {
 private:
 	float test_time;
 public:
 	Roller_Check(float _time);
 	void Initialize();
-	void Execute();
-	bool IsFinished();
+	void Execute();bool IsFinished();
 	void End();
 	void Interrupted();
 };

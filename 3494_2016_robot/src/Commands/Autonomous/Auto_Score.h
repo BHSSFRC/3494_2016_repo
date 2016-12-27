@@ -4,8 +4,7 @@
 #include "../../CommandBase.h"
 #include "WPILib.h"
 
-class Auto_Score: public CommandBase
-{
+class Auto_Score: public CommandBase {
 public:
 
 	void middle();
@@ -14,8 +13,7 @@ public:
 	void trigger();
 	Auto_Score(int position);
 	void Initialize();
-	void Execute();
-	bool IsFinished();
+	void Execute();bool IsFinished();
 	void End();
 	void Interrupted();
 

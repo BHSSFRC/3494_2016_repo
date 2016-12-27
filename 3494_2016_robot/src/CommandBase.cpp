@@ -8,13 +8,11 @@ Rollers* CommandBase::roller = NULL;
 Climber* CommandBase::climber = NULL;
 
 CommandBase::CommandBase(const std::string &name) :
-		Command(name)
-{
+		Command(name) {
 }
 
 CommandBase::CommandBase() :
-		Command()
-{
+		Command() {
 }
 
 void CommandBase::init() {

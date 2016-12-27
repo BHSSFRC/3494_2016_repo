@@ -5,12 +5,11 @@
 #include "../OI.h"
 
 Rollers::Rollers() :
-		Subsystem("Rollers")
-{
+		Subsystem("Rollers") {
 	//create a talon object to control the rollers lift
 	talon_rollers_lift_left = new CANTalon(ROLLERS_MOTOR_LIFT_LEFT);
 	//talon_rollers_lift_left -> EnableControl();
-	talon_rollers_lift_left -> SetSafetyEnabled(false);
+	talon_rollers_lift_left->SetSafetyEnabled(false);
 
 	//talon_rollers_lift_right = new CANTalon(ROLLERS_MOTOR_LIFT_RIGHT);
 	//talon_rollers_lift_right -> EnableControl();
@@ -48,8 +47,7 @@ void Rollers::Roll(bool forward, double _speed) {
 	if (forward == true) {
 		roller_left->Set(speed);
 		roller_right->Set(-speed);
-	}
-	else {
+	} else {
 		roller_left->Set(-speed);
 		roller_right->Set(speed);
 	}
@@ -67,7 +65,7 @@ bool Rollers::CheckRoll(double _duration) {
 	//duration = _duration;
 	//start = std::clock();
 	//runs 99 times. hence "button 7" being a swear word.
-	for(int a = 0; a < 99; a++) {
+	for (int a = 0; a < 99; a++) {
 		Roll(true, 0.1);
 		//again no idea which roller is which
 		leftCurrent = pdp->GetCurrent(ROLLERS_MOTOR_LEFT_PDP); // all pwm motors dont have a matching pdp
@@ -78,7 +76,7 @@ bool Rollers::CheckRoll(double _duration) {
 		//timeElapsed = (std::clock() + start)/(double)CLOCKS_PER_SEC;
 	}
 
-	if (abs(leftCurrent- rightCurrent) <= 2.0f) {
+	if (abs(leftCurrent - rightCurrent) <= 2.0f) {
 		bCheck = true;
 	}
 	return bCheck;

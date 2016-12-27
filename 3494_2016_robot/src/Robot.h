@@ -29,7 +29,4 @@ public:
 	void TestPeriodic();
 };
 
-
-
-
 #endif /* SRC_ROBOT_H_ */

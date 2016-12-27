@@ -15,15 +15,12 @@
 // following variables to use with your drivetrain subsystem.
 //const int LEFTMOTOR = 1;
 //const int RIGHTMOTOR = 2;
-
 // If you are using multiple modules, make sure to define both the port
 // number and the module. For example you with a rangefinder:
 //const int RANGE_FINDER_PORT = 1;
 //const int RANGE_FINDER_MODULE = 1;
-
 //const int ROLLERS_MOTOR = 5;
 //const int ROLLERS_MOTOR_2 = 9;
-
 const int ROLLERS_MOTOR_LIFT_RIGHT = 8;
 const int ROLLERS_MOTOR_LIFT_LEFT = 4;
 

@@ -4,8 +4,7 @@
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 
-class Kompressor_2: public Subsystem
-{
+class Kompressor_2: public Subsystem {
 private:
 	Compressor* kompressor;
 public:
