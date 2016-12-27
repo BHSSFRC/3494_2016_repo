@@ -25,7 +25,7 @@ void SystemsCheck::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void SystemsCheck::Execute() {
-	driveTrain->TestDriveTrain(5.0);
+	driveTrain->TestDriveTrain();
 	roller->CheckRoll(3);
 
 //bDriveTrain = driveTrain->TestDriveTrain(5.0);
