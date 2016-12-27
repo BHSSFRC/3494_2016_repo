@@ -20,7 +20,8 @@ private:
 
 //	AnalogGyro* gyro;
 
-	AHRS *ahrs;bool NavXFail;
+	AHRS *ahrs;
+	bool NavXFail;
 	float angle;
 	double ramp;
 
@@ -52,7 +53,6 @@ private:
 	bool bCheck;
 	float rightCurrent;
 	float leftCurrent;
-
 };
 
 #endif
