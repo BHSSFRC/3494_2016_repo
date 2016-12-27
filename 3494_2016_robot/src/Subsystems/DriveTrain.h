@@ -46,7 +46,8 @@ public:
 	double GetPosition();
 	//bool currentGear;
 	int Encoder_Position();
-	void ResetEncoders();bool TestDriveTrain(float _duration);
+	void ResetEncoders();
+	bool TestDriveTrain();
 	void Fail_NavX(bool fail);
 private:
 	bool bCheck;
