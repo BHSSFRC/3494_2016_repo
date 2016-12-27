@@ -21,17 +21,16 @@ void Roller_Lift_Mid::Execute() {
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool Roller_Lift_Mid::IsFinished()
-{
-/*	if (down_voltage >= 4.9 || oi->Get11()) {
-	// if the sensor is tripped or stopped by button 11 then the command no longer runs
-	roller->Roller_Lift(0); // stop rollers
-	return true; // stop command
-	}
-	else {
-		return false;
-	}
-*/
+bool Roller_Lift_Mid::IsFinished() {
+	/*	if (down_voltage >= 4.9 || oi->Get11()) {
+	 // if the sensor is tripped or stopped by button 11 then the command no longer runs
+	 roller->Roller_Lift(0); // stop rollers
+	 return true; // stop command
+	 }
+	 else {
+	 return false;
+	 }
+	 */
 	return false;
 }
 

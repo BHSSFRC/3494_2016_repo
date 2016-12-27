@@ -20,22 +20,18 @@ Autonomous_Sequences::Autonomous_Sequences(int autoMode) {
 	if (autoMode == 1) {
 		auto1();
 		one = true;
-	}
-	else if (autoMode == 2) {
+	} else if (autoMode == 2) {
 		auto2();
 		two = true;
-	}
-	else if (autoMode == 3) {
+	} else if (autoMode == 3) {
 		auto3();
 		three = true;
-	}
-	else if (autoMode == 4) {
+	} else if (autoMode == 4) {
 		defense = prefs->GetString("defense", "moat");
 		backto = prefs->GetBoolean("back to", false);
 		auto4();
 		four = true;
-	}
-	else if (autoMode == 5) {
+	} else if (autoMode == 5) {
 		auto5();
 		five = true;
 	}
@@ -75,19 +71,17 @@ void Autonomous_Sequences::auto4() {
 	}
 	if (defense == "low bar" or "bar") {
 		AddSequential(new Auto_Move_Tim(0.75, 0.75, 5));
-	}
-	else if (defense == "ramparts" or defense == "ramps") {
+	} else if (defense == "ramparts" or defense == "ramps") {
 		// ramparts
 		AddSequential(new Auto_Move_Tim(0.75, 0.75, 2.5));
 		AddSequential(new Auto_Move_Tim(1, 1, 3));
-	}
-	else if (defense == "moat" or defense == "Moat") {
-		AddSequential(new Auto_Move_Tim(.75, .75,1));
+	} else if (defense == "moat" or defense == "Moat") {
+		AddSequential(new Auto_Move_Tim(.75, .75, 1));
 		AddSequential(new Auto_Move_Tim(1, 1, 1.5));
 		AddSequential(new Auto_Move_Tim(.70, .70, 1));
-	}
-	else {
-		std::cout << "I'm amazed. " << defense << " is on the field and not a defense.";
+	} else {
+		std::cout << "I'm amazed. " << defense
+				<< " is on the field and not a defense.";
 	}
 
 	// AddSequential(new Auto_Move_Tim(.50, .50, 1.5)); // worked when 3% was shaved off of left side

@@ -5,15 +5,13 @@
 #include "WPILib.h"
 #include "../../Subsystems/DriveTrain.h"
 
-class Shift_Gear: public CommandBase
-{
+class Shift_Gear: public CommandBase {
 private:
 	bool mode;
 public:
 	Shift_Gear(bool _mode);
 	void Initialize();
-	void Execute();
-	bool IsFinished();
+	void Execute();bool IsFinished();
 	void End();
 	void Interrupted();
 };

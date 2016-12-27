@@ -54,7 +54,6 @@ OI::OI() {
 	buttonSelect_3 = new JoystickButton(controller_3, 7);
 	buttonStart_3 = new JoystickButton(controller_3, 8);
 
-
 	//define button 12 controller 2 to reset encoders
 	button12_2->WhenPressed(new reset_encoders());
 
@@ -93,17 +92,17 @@ float OI::GetJoystickY() {
 
 /*
  float OI::GetRightJoystick() {
-	return -1 * controller->GetRawAxis(5);
-}
-*/
-double OI::GetJoystick_2Y(){
+ return -1 * controller->GetRawAxis(5);
+ }
+ */
+double OI::GetJoystick_2Y() {
 	return -1 * controller_2->GetRawAxis(1);
 }
 /*
-double OI::GetRightJoystick_2(){
-	return -1 * controller_2->GetRawAxis(5);
-}
-*/
+ double OI::GetRightJoystick_2(){
+ return -1 * controller_2->GetRawAxis(5);
+ }
+ */
 double OI::GetRightTrigger() {
 	return controller->GetRawButton(1);
 }
@@ -116,10 +115,10 @@ double OI::GetLeftTrigger() {
 	return controller->GetRawAxis(2);
 }
 /*
-double OI::GetRightTrigger() {
-	return controller->GetRawAxis(3);
-}
-*/
+ double OI::GetRightTrigger() {
+ return controller->GetRawAxis(3);
+ }
+ */
 double OI::GetDPad_2() {
 	return controller_2->GetPOV();
 }
@@ -136,10 +135,10 @@ double OI::GetLeftTrigger_2() {
 	return controller_2->GetRawAxis(2);
 }
 /*
-double OI::GetRightTrigger_2() {
-	return controller_2->GetRawAxis(3);
-}
-*/
+ double OI::GetRightTrigger_2() {
+ return controller_2->GetRawAxis(3);
+ }
+ */
 float OI::GetLeftBumper() {
 	return controller->GetRawButton(5);
 }
@@ -152,7 +151,7 @@ float OI::Get11() {
 	return controller->GetRawButton(11);
 }
 
- float OI::GetY() {
+float OI::GetY() {
 	return controller_3->GetRawButton(4);
 }
 

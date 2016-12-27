@@ -5,21 +5,18 @@
 #include "WPILib.h"
 #include "../../Subsystems/DriveTrain.h"
 
-class Autonomous_Move: public CommandBase
-{
+class Autonomous_Move: public CommandBase {
 public:
 	Autonomous_Move(float _distance, float _speed);
 	void Initialize();
-	void Execute();
-	bool IsFinished();
+	void Execute();bool IsFinished();
 	void End();
 	void Interrupted();
 
 private:
 	float distance;
 	float speed;
-	float target;
-	bool back;
+	float target;bool back;
 };
 
 #endif

@@ -2,9 +2,9 @@
 
 Auto_Roller_Lift::Auto_Roller_Lift(float time_, float speed_) {
 	// Use Requires() here to declare subsystem dependencies
-	 Requires(roller);
+	Requires(roller);
 	// speed = speed_;
-	 time = time_;
+	time = time_;
 	roller_speed = speed_;
 }
 
@@ -26,10 +26,10 @@ bool Auto_Roller_Lift::IsFinished() {
 }
 
 // Called once after isFinished returns true
-void Auto_Roller_Lift::End(){
+void Auto_Roller_Lift::End() {
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void Auto_Roller_Lift::Interrupted(){
+void Auto_Roller_Lift::Interrupted() {
 }

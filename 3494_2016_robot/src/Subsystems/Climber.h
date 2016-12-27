@@ -4,8 +4,7 @@
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 
-class Climber: public Subsystem
-{
+class Climber: public Subsystem {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
@@ -13,8 +12,7 @@ private:
 	Talon* WenchTalon_2;
 	PowerDistributionPanel* pdp;
 	DoubleSolenoid* solenoid_climber_arm;
-	DoubleSolenoid* shifter;
-	bool currentGear;
+	DoubleSolenoid* shifter;bool currentGear;
 
 //	bool currentGear;
 public:

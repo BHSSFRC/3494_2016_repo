@@ -9,11 +9,9 @@ Auto_Score::Auto_Score(int position) {
 void Auto_Score::trigger() {
 	if (Position == 1) {
 		middle();
-	}
-	else if (Position == 2) {
+	} else if (Position == 2) {
 		right();
-	}
-	else if (Position == 3) {
+	} else if (Position == 3) {
 		left();
 	}
 }
@@ -26,7 +24,6 @@ void Auto_Score::right() {
 
 void Auto_Score::left() {
 }
-
 
 // Called just before this Command runs the first time
 void Auto_Score::Initialize() {
@@ -42,7 +39,7 @@ bool Auto_Score::IsFinished() {
 }
 
 // Called once after isFinished returns true
-void Auto_Score::End(){
+void Auto_Score::End() {
 }
 
 // Called when another command which requires one or more of the same

@@ -1,7 +1,6 @@
 #include "Lift_Set.h"
 
-Lift_Set::Lift_Set(bool _mode)
-{
+Lift_Set::Lift_Set(bool _mode) {
 	mode = _mode;
 	// Use Requires() here to declare subsystem dependencies
 	Requires(climber);
@@ -9,34 +8,29 @@ Lift_Set::Lift_Set(bool _mode)
 }
 
 // Called just before this Command runs the first time
-void Lift_Set::Initialize()
-{
+void Lift_Set::Initialize() {
 
 }
 
 // Called repeatedly when this Command is scheduled to run
-void Lift_Set::Execute()
-{
+void Lift_Set::Execute() {
 	CommandBase::climber->Setter(mode);
 	SmartDashboard::PutBoolean("Set", mode);
 
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool Lift_Set::IsFinished()
-{
+bool Lift_Set::IsFinished() {
 	return true;
 }
 
 // Called once after isFinished returns true
-void Lift_Set::End()
-{
+void Lift_Set::End() {
 
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void Lift_Set::Interrupted()
-{
+void Lift_Set::Interrupted() {
 
 }

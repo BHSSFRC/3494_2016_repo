@@ -20,11 +20,10 @@ void Autonomous_Move::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void Autonomous_Move::Execute() {
 	// CommandBase::driveTrain->TankDrive(-speed, speed);
-	if (target < 0 ) {
+	if (target < 0) {
 		CommandBase::driveTrain->TankDrive(speed, -speed);
 		back = true;
-	}
-	else if (target > 0) {
+	} else if (target > 0) {
 		CommandBase::driveTrain->TankDrive(-speed, speed);
 		back = false;
 	}

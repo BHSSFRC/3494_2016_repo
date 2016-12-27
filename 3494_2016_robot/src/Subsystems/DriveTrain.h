@@ -6,8 +6,7 @@
 #include <ctime>
 #include "AHRS.h"
 
-class DriveTrain: public Subsystem
-{
+class DriveTrain: public Subsystem {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
@@ -21,8 +20,7 @@ private:
 
 //	AnalogGyro* gyro;
 
-	AHRS *ahrs;
-	bool NavXFail;
+	AHRS *ahrs;bool NavXFail;
 	float angle;
 	double ramp;
 
@@ -30,7 +28,7 @@ private:
 	float power = 1;
 	//clock (commented out for now)
 	//std::clock_t start;
-	double timeElapsed= 0.0;
+	double timeElapsed = 0.0;
 	float duration;
 
 	float Rpulse, Lpulse;
@@ -48,8 +46,7 @@ public:
 	double GetPosition();
 	//bool currentGear;
 	int Encoder_Position();
-	void ResetEncoders();
-	bool TestDriveTrain(float _duration);
+	void ResetEncoders();bool TestDriveTrain(float _duration);
 	void Fail_NavX(bool fail);
 private:
 	bool bCheck;
