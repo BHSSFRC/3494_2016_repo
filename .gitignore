@@ -81,6 +81,3 @@ local.properties
 
 # Code Recommenders
 .recommenders/
-
-# reSt
-docs/_build
