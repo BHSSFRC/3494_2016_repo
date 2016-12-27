@@ -13,8 +13,7 @@ Contents:
 
    drivetrain
    rollers
-
-
+   contributing
 
 Indices and tables
 ==================
