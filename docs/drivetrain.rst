@@ -41,3 +41,6 @@ The currennt on the side specified by the ``value`` argument.
  * If ``value`` is 0, the current draw of the left side is returned.
  * If ``value`` is 1, the current draw of the right side is returned.
  * For any other value, 0 is returned.
+
+Variables
+---------

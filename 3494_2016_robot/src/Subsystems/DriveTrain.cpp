@@ -172,8 +172,7 @@ void DriveTrain::ResetEncoders() {
 	RightTalonFollower_2->SetPosition(0);
 }
 
-bool DriveTrain::TestDriveTrain(float _duration) {
-	//float duration = _duration;
+bool DriveTrain::TestDriveTrain() {
 	//start = std::clock();
 	//runs 99 times. this is why "button 7" is a bad word.
 	for(int a = 0; a < 99;a++) {
