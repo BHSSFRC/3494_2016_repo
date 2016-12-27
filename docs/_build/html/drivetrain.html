@@ -76,7 +76,7 @@ Current draw on <code class="docutils literal"><span class="pre">LEFT_MOTOR_FOLL
 </dl>
 <p>Returns:</p>
 <dl class="docutils">
-<dt>The currennt on the side specified by the <code class="docutils literal"><span class="pre">value</span></code> argument.</dt>
+<dt>The current on the side specified by the <code class="docutils literal"><span class="pre">value</span></code> argument.</dt>
 <dd><ul class="first last simple">
 <li>If <code class="docutils literal"><span class="pre">value</span></code> is 0, the current draw of the left side is returned.</li>
 <li>If <code class="docutils literal"><span class="pre">value</span></code> is 1, the current draw of the right side is returned.</li>
@@ -92,6 +92,7 @@ Current draw on <code class="docutils literal"><span class="pre">LEFT_MOTOR_FOLL
 <dt>LeftTalonMaster</dt>
 <dd><ul class="first simple">
 <li>Type: <code class="docutils literal"><span class="pre">CANTalon</span></code></li>
+<li>Private: Yes</li>
 </ul>
 <p class="last">Notes: This is the <strong>master</strong> talon on the left side of the drive train. Driving it will (read: should) make the other ones follow it automatically.</p>
 </dd>
@@ -99,6 +100,7 @@ Current draw on <code class="docutils literal"><span class="pre">LEFT_MOTOR_FOLL
 <dd><ul class="first simple">
 <li>Type: <code class="docutils literal"><span class="pre">CANTalon</span></code></li>
 <li>Master: LeftTalonMaster</li>
+<li>Private: Yes</li>
 </ul>
 <p class="last">Notes: This talon should automatically follow LeftTalonMaster.</p>
 </dd>
@@ -106,8 +108,30 @@ Current draw on <code class="docutils literal"><span class="pre">LEFT_MOTOR_FOLL
 <dd><ul class="first simple">
 <li>Type: <code class="docutils literal"><span class="pre">CANTalon</span></code></li>
 <li>Master: LeftTalonMaster</li>
+<li>Private: Yes</li>
 </ul>
 <p class="last">Notes: See LeftTalonFollower</p>
+</dd>
+<dt>RightTalonMaster</dt>
+<dd><ul class="first simple">
+<li>Type: <code class="docutils literal"><span class="pre">CANTalon</span></code></li>
+<li>Private: Yes</li>
+</ul>
+<p class="last">Notes: This is the <strong>master</strong> talon on the right side of the drive train. Driving it will (read: should) make the other ones follow it automatically.</p>
+</dd>
+<dt>RightTalonFollower</dt>
+<dd><ul class="first simple">
+<li>Type: <code class="docutils literal"><span class="pre">CANTalon</span></code></li>
+<li>Master: RightTalonMaster</li>
+<li>Private: Yes</li>
+</ul>
+<p class="last">Notes: This talon should automatically follow RightTalonMaster.</p>
+</dd>
+<dt>pdp</dt>
+<dd><p class="first">The power distribution panel.</p>
+<ul class="last simple">
+<li>Private: Yes</li>
+</ul>
 </dd>
 </dl>
 </div>
