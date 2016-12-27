@@ -20,8 +20,7 @@ private:
 
 //	AnalogGyro* gyro;
 
-	AHRS *ahrs;
-	bool NavXFail;
+	AHRS *ahrs;bool NavXFail;
 	float angle;
 	double ramp;
 

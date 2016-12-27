@@ -11,9 +11,9 @@ DriveTrain::DriveTrain() :
 	timeElapsed = 0.0;
 	duration = 0.0;
 ////////////////////////////////////////////////////////////
-	LeftTalonMaster = new CANTalon(LEFT_MOTOR_MASTER);//	Left CANTalon motor subgroup
-	LeftTalonFollower = new CANTalon(LEFT_MOTOR_FOLLOWER);//	1 talon is assigned for each CIM
-	LeftTalonFollower_2 = new CANTalon(LEFT_MOTOR_FOLLOWER_2);//	3 CIM per gearbox
+	LeftTalonMaster = new CANTalon(LEFT_MOTOR_MASTER); //	Left CANTalon motor subgroup
+	LeftTalonFollower = new CANTalon(LEFT_MOTOR_FOLLOWER); //	1 talon is assigned for each CIM
+	LeftTalonFollower_2 = new CANTalon(LEFT_MOTOR_FOLLOWER_2); //	3 CIM per gearbox
 
 	LeftTalonMaster->EnableControl();
 	LeftTalonMaster->SetSafetyEnabled(false);
