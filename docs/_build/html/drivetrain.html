@@ -88,6 +88,28 @@ Current draw on <code class="docutils literal"><span class="pre">LEFT_MOTOR_FOLL
 </div>
 <div class="section" id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>LeftTalonMaster</dt>
+<dd><ul class="first simple">
+<li>Type: <code class="docutils literal"><span class="pre">CANTalon</span></code></li>
+</ul>
+<p class="last">Notes: This is the <strong>master</strong> talon on the left side of the drive train. Driving it will (read: should) make the other ones follow it automatically.</p>
+</dd>
+<dt>LeftTalonFollower</dt>
+<dd><ul class="first simple">
+<li>Type: <code class="docutils literal"><span class="pre">CANTalon</span></code></li>
+<li>Master: LeftTalonMaster</li>
+</ul>
+<p class="last">Notes: This talon should automatically follow LeftTalonMaster.</p>
+</dd>
+<dt>LeftTalonFollower_2</dt>
+<dd><ul class="first simple">
+<li>Type: <code class="docutils literal"><span class="pre">CANTalon</span></code></li>
+<li>Master: LeftTalonMaster</li>
+</ul>
+<p class="last">Notes: See LeftTalonFollower</p>
+</dd>
+</dl>
 </div>
 </div>
 

@@ -44,3 +44,14 @@ The currennt on the side specified by the ``value`` argument.
 
 Variables
 ---------
+LeftTalonMaster
+  * Type: ``CANTalon``
+  Notes: This is the **master** talon on the left side of the drive train. Driving it will (read: should) make the other ones follow it automatically.
+LeftTalonFollower
+  * Type: ``CANTalon``
+  * Master: LeftTalonMaster
+  Notes: This talon should automatically follow LeftTalonMaster.
+LeftTalonFollower_2
+  * Type: ``CANTalon``
+  * Master: LeftTalonMaster
+  Notes: See LeftTalonFollower
