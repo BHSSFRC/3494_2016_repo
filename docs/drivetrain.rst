@@ -57,4 +57,8 @@ LeftTalonFollower_2
   Notes: See LeftTalonFollower
 RightTalonMaster
   * Type: ``CANTalon``
-  Notes:This is the **master** talon on the right side of the drive train. Driving it will (read: should) make the other ones follow it automatically.
+  Notes: This is the **master** talon on the right side of the drive train. Driving it will (read: should) make the other ones follow it automatically.
+RightTalonFollower
+  * Type: ``CANTalon``
+  * Master: RightTalonMaster
+  Notes: This talon should automatically follow RightTalonMaster
