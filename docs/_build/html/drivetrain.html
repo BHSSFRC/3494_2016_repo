@@ -45,6 +45,47 @@
   <div class="section" id="drivetrain">
 <h1>Drivetrain<a class="headerlink" href="#drivetrain" title="Permalink to this headline">¶</a></h1>
 <p>The drivetrain subsytem controls the six motors which drive the robot&#8217;s tank drive.</p>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tankdrive">
+<h3>TankDrive<a class="headerlink" href="#tankdrive" title="Permalink to this headline">¶</a></h3>
+<p>Drives the drive train. Also automatically updates the SmartDashboard with the power levels the drive train is set to.</p>
+<p>Arguments:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">float</span> <span class="pre">leftAxis</span></code></dt>
+<dd>The power level to set the left set of motors to.</dd>
+<dt><code class="docutils literal"><span class="pre">float</span> <span class="pre">rightAxis</span></code></dt>
+<dd>The power level to set the right set of motors to.</dd>
+</dl>
+</div>
+<div class="section" id="powerdistoutput">
+<h3>PowerDistOutput<a class="headerlink" href="#powerdistoutput" title="Permalink to this headline">¶</a></h3>
+<p>Returns the current draw on <code class="docutils literal"><span class="pre">LEFT_MOTOR_FOLLOWER</span></code> according to the PDP board.</p>
+<p>Arguments:
+<code class="docutils literal"><span class="pre">null</span></code></p>
+<p>Returns:
+Current draw on <code class="docutils literal"><span class="pre">LEFT_MOTOR_FOLLOWER</span></code>, as an <code class="docutils literal"><span class="pre">int</span></code>.</p>
+</div>
+<div class="section" id="powerside">
+<h3>PowerSide<a class="headerlink" href="#powerside" title="Permalink to this headline">¶</a></h3>
+<p>Gets the total current draw on a given side of the drive train.</p>
+<p>Arguments:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">int</span> <span class="pre">value</span></code></dt>
+<dd>An <code class="docutils literal"><span class="pre">int</span></code>, preferably 0 or 1, the specifies which side to get the current draw of.</dd>
+</dl>
+<p>Returns:</p>
+<dl class="docutils">
+<dt>The currennt on the side specified by the <code class="docutils literal"><span class="pre">value</span></code> argument.</dt>
+<dd><ul class="first last simple">
+<li>If <code class="docutils literal"><span class="pre">value</span></code> is 0, the current draw of the left side is returned.</li>
+<li>If <code class="docutils literal"><span class="pre">value</span></code> is 1, the current draw of the right side is returned.</li>
+<li>For any other value, 0 is returned.</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
 </div>
 
 
@@ -52,7 +93,20 @@
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Drivetrain</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#tankdrive">TankDrive</a></li>
+<li><a class="reference internal" href="#powerdistoutput">PowerDistOutput</a></li>
+<li><a class="reference internal" href="#powerside">PowerSide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
